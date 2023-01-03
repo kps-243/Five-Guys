@@ -1,0 +1,23 @@
+@import "./../variable/variable.scss";
+
+// Pour le header
+.navbar{
+    box-sizing: border-box;
+    #logo{
+        color: $color-base;
+    }
+    #burger{
+        width: 42px;
+        height: 24px;
+        position: relative;
+        cursor: pointer;
+        #burger1{
+            height: 4px;
+            width: 100%;
+            position: absolute;
+        }
+    }
+    .menu{
+        margin-left: -200%;
+    }
+}
