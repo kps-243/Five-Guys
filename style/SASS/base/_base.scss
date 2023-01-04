@@ -2,8 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
-@import "./../variable/variable.scss";
+@import "./../abstracts/variable";
 
 @font-face {
     font-family: "HelveticaL";
@@ -31,7 +30,12 @@ article, footer, header, nav, section {
 body {
     font-family: "HelveticaL";
 	line-height: 1;
-    overflow-x: hidden;
+    overflow-x: hidden;   
+}
+
+article, footer, header, nav, section {
+	display: block;
+    text-transform: uppercase;
 }
 ul {
 	list-style: none;

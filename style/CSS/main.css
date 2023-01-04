@@ -28,6 +28,11 @@ body {
   overflow-x: hidden;
 }
 
+article, footer, header, nav, section {
+  display: block;
+  text-transform: uppercase;
+}
+
 ul {
   list-style: none;
 }
@@ -41,36 +46,44 @@ img {
   width: 100%;
 }
 
-article, footer, header, nav, section {
-  display: block;
-  text-transform: uppercase;
-}
-
 header {
   width: 100%;
   height: 52px;
 }
-
-.navbar {
+header .navbar {
   box-sizing: border-box;
 }
-.navbar #logo {
+header .navbar #logo {
   color: #d21033;
 }
-.navbar #burger {
+header .navbar #burger {
   width: 42px;
   height: 24px;
   position: relative;
   float: right;
   cursor: pointer;
 }
-.navbar #burger #burger1 {
+header .navbar #burger #burger1 {
   position: absolute;
   display: block;
   height: 4px;
   width: 100%;
   background-color: #d21033;
+  transform: translateY(-50%);
+  transition: background-color 0.5s ease-in-out;
 }
-.navbar .menu {
+header .navbar #burger #burger1 ::before, header .navbar #burger #burger1 ::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #d21033;
+  transition: transform 0.5s ease-in-out;
+}
+header .navbar .menu {
   margin-left: -200%;
-}/*# sourceMappingURL=style.css.map */
+}
+
+h1 {
+  font-size: 16px;
+}/*# sourceMappingURL=main.css.map */
