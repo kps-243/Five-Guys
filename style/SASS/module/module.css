@@ -8,12 +8,25 @@
   width: 42px;
   height: 24px;
   position: relative;
+  float: right;
   cursor: pointer;
 }
-.navbar #burger #burger1 {
+.navbar #burger #burger1, .navbar #burger ::before, .navbar #burger ::after {
+  position: absolute;
+  display: block;
   height: 4px;
   width: 100%;
+  background-color: #d21033;
+  transform: translateY(-50%);
+  transition: background-color 0.5s ease-in-out;
+}
+.navbar #burger #burger1 ::before, .navbar #burger #burger1 ::after, .navbar #burger ::before ::before, .navbar #burger ::before ::after, .navbar #burger ::after ::before, .navbar #burger ::after ::after {
+  content: "";
   position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #d21033;
+  transition: transform 0.5s ease-in-out;
 }
 .navbar .menu {
   margin-left: -200%;

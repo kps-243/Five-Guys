@@ -10,11 +10,25 @@
         width: 42px;
         height: 24px;
         position: relative;
+        float: right;
         cursor: pointer;
-        #burger1{
+        #burger1, ::before, ::after{
+            position: absolute;
+            display: block;
             height: 4px;
             width: 100%;
-            position: absolute;
+            background-color: $color-base;
+            transform: translateY(-50%);
+            transition: background-color 0.5s ease-in-out;
+            ::before, ::after{
+                content: "";
+                position: absolute;
+                height: 4px;
+                width: 100%;
+                background-color: $color-base;
+                transition: transform 0.5s ease-in-out;
+
+            }
         }
     }
     .menu{

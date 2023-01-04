@@ -61,12 +61,15 @@ header {
   width: 42px;
   height: 24px;
   position: relative;
+  float: right;
   cursor: pointer;
 }
 .navbar #burger #burger1 {
+  position: absolute;
+  display: block;
   height: 4px;
   width: 100%;
-  position: absolute;
+  background-color: #d21033;
 }
 .navbar .menu {
   margin-left: -200%;
