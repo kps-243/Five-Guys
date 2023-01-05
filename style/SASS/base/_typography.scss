@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "HelveticaL";
+    src: url(./../../../ressource/font/HelveticaLTW05-Black.woff2) format(woff2),
+         url(./../../../ressource/font/HelveticaLTW05-Light.woff2) format(woff2);
+    
+}
+@font-face {
+    font-family: "nautilus";
+    src: url(./../../../ressource/font/nautilus-webfont.woff2) format(woff2);
+}
+
+body {
+    font-family: "HelveticaL";
+	line-height: 1;
+    overflow-x: hidden;   
+}
