@@ -1,24 +1,28 @@
 @import "./../abstracts/variable";
 
+
 header{
     width: 100%;
-    height: 52px;
+    height: 70px;
     .navbar{
-        box-sizing: border-box;
+        display: flex;
+        width: 100%;
         
         #logo{
+            margin-top: 24px;
+            margin-left: 3%;
             color: $color-base;
+            font-size: 22px;
         }
         
         .burger{
-            margin-top: 14px;
-            margin-right: 10px;
+            margin-top: 32px;
+            margin-left: 53%;
             width: 18px;
             height: 12px;
             position: relative;
-            float: right;
             cursor: pointer;
-            
+            float: right;
             .burger1{
                 position: absolute;
                 display: block;
@@ -43,15 +47,28 @@ header{
                     transform: translateY(7.5px);
                 }
             }
-
             
-                
-                
-                
+
+            }
+            
+            
+            .burger{
+                    &.close.burger1{
+                        background-color: transparent;
+                }
+        }    
+        .burger.close.burger1::before{
+            transform: translateY(0px) rotate(45deg);
+        }
+        .burger.close.burger1::after{
+            transform: translateY(0px) rotate(-45deg);
+        }     
             
         }
         .menu{
             margin-left: -200%;
         }
     }
-}
+
+
+

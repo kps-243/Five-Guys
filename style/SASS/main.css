@@ -47,22 +47,26 @@ body {
 
 header {
   width: 100%;
-  height: 52px;
+  height: 70px;
 }
 header .navbar {
-  box-sizing: border-box;
+  display: flex;
+  width: 100%;
 }
 header .navbar #logo {
+  margin-top: 24px;
+  margin-left: 3%;
   color: #d21033;
+  font-size: 22px;
 }
 header .navbar .burger {
-  margin-top: 14px;
-  margin-right: 10px;
+  margin-top: 32px;
+  margin-left: 53%;
   width: 18px;
   height: 12px;
   position: relative;
-  float: right;
   cursor: pointer;
+  float: right;
 }
 header .navbar .burger .burger1 {
   position: absolute;
@@ -87,7 +91,16 @@ header .navbar .burger .burger1::before {
 header .navbar .burger .burger1::after {
   transform: translateY(7.5px);
 }
-header .navbar .menu {
+header .navbar .burger.close.burger1 {
+  background-color: transparent;
+}
+header .navbar .burger.close.burger1::before {
+  transform: translateY(0px) rotate(45deg);
+}
+header .navbar .burger.close.burger1::after {
+  transform: translateY(0px) rotate(-45deg);
+}
+header .menu {
   margin-left: -200%;
 }
 
