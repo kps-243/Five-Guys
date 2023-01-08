@@ -14,31 +14,31 @@ header{
             color: $color-base;
             font-size: 22px;
         }
-        
+
         .burger{
-            margin-top: 32px;
-            margin-left: 53%;
-            width: 18px;
+            top: 28px;
+            width: 24px;
             height: 12px;
-            position: relative;
+            left: 52%;
             cursor: pointer;
-            float: right;
-            .burger1{
-                position: absolute;
-                display: block;
+            position: relative;
+            z-index: 2;
+            span{
                 height: 4px;
                 width: 100%;
                 background-color: $color-base;
+                display: block;
+                position: absolute;
+                top: 50%;
                 transform: translateY(-50%);
-                transition: background-color 0.5s ease-in-out;
+                transition: background-color 0.2s ease-in-out;
                 &::before, &::after{
                     content: "";
                     position: absolute;
                     height: 4px;
                     width: 100%;
                     background-color: $color-base;
-                    transition: transform 0.5s ease-in-out;
-    
+                    transition: transform 0.2s ease-in-out;
                 }
                 &::before{
                     transform: translateY(-7.5px);
@@ -47,28 +47,25 @@ header{
                     transform: translateY(7.5px);
                 }
             }
-            
-
-            }
-            
-            
-            .burger{
-                    &.close.burger1{
-                        background-color: transparent;
+            &.close span{
+                background-color: transparent;
+                &::before{
+                    transform: translateY(0px) rotate(45deg);
                 }
-        }    
-        .burger.close.burger1::before{
-            transform: translateY(0px) rotate(45deg);
+                &::after{
+                    transform: translateY(0px) rotate(-45deg);
+                }
+            }
         }
-        .burger.close.burger1::after{
-            transform: translateY(0px) rotate(-45deg);
-        }     
-            
+    
+            }
         }
         .menu{
             margin-left: -200%;
         }
-    }
+    
 
+    
+   
 
 

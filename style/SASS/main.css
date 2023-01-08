@@ -60,47 +60,49 @@ header .navbar #logo {
   font-size: 22px;
 }
 header .navbar .burger {
-  margin-top: 32px;
-  margin-left: 53%;
-  width: 18px;
+  top: 28px;
+  width: 24px;
   height: 12px;
-  position: relative;
+  left: 52%;
   cursor: pointer;
-  float: right;
+  position: relative;
+  z-index: 2;
 }
-header .navbar .burger .burger1 {
-  position: absolute;
-  display: block;
+header .navbar .burger span {
   height: 4px;
   width: 100%;
   background-color: #d21033;
+  display: block;
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
-  transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 }
-header .navbar .burger .burger1::before, header .navbar .burger .burger1::after {
+header .navbar .burger span::before, header .navbar .burger span::after {
   content: "";
   position: absolute;
   height: 4px;
   width: 100%;
   background-color: #d21033;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
-header .navbar .burger .burger1::before {
+header .navbar .burger span::before {
   transform: translateY(-7.5px);
 }
-header .navbar .burger .burger1::after {
+header .navbar .burger span::after {
   transform: translateY(7.5px);
 }
-header .navbar .burger.close.burger1 {
+header .navbar .burger.close span {
   background-color: transparent;
 }
-header .navbar .burger.close.burger1::before {
+header .navbar .burger.close span::before {
   transform: translateY(0px) rotate(45deg);
 }
-header .navbar .burger.close.burger1::after {
+header .navbar .burger.close span::after {
   transform: translateY(0px) rotate(-45deg);
 }
-header .menu {
+
+.menu {
   margin-left: -200%;
 }
 
