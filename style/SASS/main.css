@@ -58,12 +58,17 @@ header .navbar #logo {
   margin-left: 3%;
   color: #d21033;
   font-size: 22px;
+  z-index: 2;
+}
+header .navbar #logo span {
+  position: absolute;
+  left: 75px;
 }
 header .navbar .burger {
   top: 28px;
   width: 24px;
   height: 12px;
-  left: 52%;
+  left: 74%;
   cursor: pointer;
   position: relative;
   z-index: 2;
@@ -103,7 +108,44 @@ header .navbar .burger.close span::after {
 }
 
 .menu {
+  top: 0;
+  left: 0;
+  position: relative;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-left: -200%;
+  transition: margin 1s;
+  visibility: hidden;
+}
+.menu.open {
+  height: 100vh;
+  position: absolute;
+  background-color: black;
+  visibility: visible;
+  z-index: 1;
+}
+.menu.open ul {
+  margin: 0;
+  visibility: visible;
+}
+.menu.open ul li {
+  margin: 20px 0px;
+}
+.menu.open ul li a {
+  font-size: 1.4em;
+  transition: font-size 1s;
+}
+.menu.open ul li a:hover {
+  cursor: pointer;
+  font-size: 1.8rem;
 }
 
 h1 {

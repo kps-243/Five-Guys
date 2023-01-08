@@ -13,13 +13,18 @@ header{
             margin-left: 3%;
             color: $color-base;
             font-size: 22px;
+            z-index: 2;
+            span{
+                position: absolute;
+                left: 75px;
+            }
         }
 
         .burger{
             top: 28px;
             width: 24px;
             height: 12px;
-            left: 52%;
+            left: 74%;
             cursor: pointer;
             position: relative;
             z-index: 2;
@@ -61,8 +66,47 @@ header{
             }
         }
         .menu{
-            margin-left: -200%;
+            top: 0;
+            left: 0;
+            position: relative;
+            width: 100vw;
+            height: 60px;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            ul{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-left: -200%;
+                transition: margin 1s;
+                visibility: hidden;
+            }
+            &.open{
+                height: 100vh;
+                position: absolute;
+                background-color: black;
+                visibility: visible;
+                z-index: 1;
+                ul{
+                    margin: 0;
+                    visibility: visible;
+                    li{
+                        margin: 20px 0px;
+                        a{
+                            font-size: 1.4em;
+                            transition: font-size 1s;
+                        }
+                        a:hover{
+                            cursor: pointer;
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+
+            }
         }
+
     
 
     
