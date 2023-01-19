@@ -159,11 +159,20 @@ header .navbar .burger.close span::after {
   background-position: 0 0, 16px 16px;
 }
 
+.hero-section {
+  background-color: #d21033;
+}
+
 h1 {
-  font-size: 16px;
+  font-size: 35px;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  top: 35%;
 }
 
 .m-burger {
   display: inline-block;
   width: 40vw;
+  margin-left: 60%;
 }/*# sourceMappingURL=main.css.map */
