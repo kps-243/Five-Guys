@@ -146,7 +146,7 @@ header .navbar .burger.close span::after {
 
 .hero-section {
   width: 100vw;
-  height: 500px;
+  height: 300px;
 }
 .hero-section::before, .hero-section::after {
   content: "";
